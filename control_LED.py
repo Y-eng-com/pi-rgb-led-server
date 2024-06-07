@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from gpiozero import RGBLED
 
-COLORS = [(1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1)]
+WHITE  = (1,1,1)
 RED    = (1,0,0)
 GREEN  = (0,1,0)
 BLUE   = (0,0,1)
@@ -17,10 +17,8 @@ def change_color(state):
     LEDの状態を制御する関数
     :param state: 'on' または 'off'
     """
-    if state == "on":
-        led.color = RED
-    elif state == "off":
-        led.color = BLACK
+    if state == "white":
+        led.color = WHITE
     elif state == "red":
         led.color = RED
     elif state == "green":
