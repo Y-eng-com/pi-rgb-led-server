@@ -12,7 +12,7 @@ def control_LED_color():
     """
     data = request.get_json()
     state = data.get('state')
-    if state in ['on', 'off']:
+    if state in ['on', 'off', 'red', 'green', 'blue', 'yellow', 'purple', 'cyan', 'black']:
         control_LED.change_color(state)
         return "LED turned {}".format(state), 200
     return "Invalid state", 400
